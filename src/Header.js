@@ -23,8 +23,10 @@ const Header = () => {
         </div>
         <div className="header__nav">
           <div className="header__option">
-            <span className="header__optionLineOne">Hello Guest</span>
-            <span className="header__optionLineTwo">sign in</span>
+            <Link to="/Login">
+              <span className="header__optionLineOne">Hello Guest</span>
+              <span className="header__optionLineTwo">sign in</span>
+            </Link>
           </div>
 
           <div className="header__option">
@@ -38,7 +40,9 @@ const Header = () => {
           <Link to="/Checkout">
             <div className="header__optionBasket">
               <ShoppingBasketIcon />
-              <span className="header__basketCount"/>{basket.length}<span />
+              <span className="header__basketCount" />
+              {basket.length}
+              <span />
             </div>
           </Link>
         </div>
