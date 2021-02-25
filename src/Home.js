@@ -50,7 +50,8 @@ const Home = () => {
               price={6.99}
               rating={5}
               image="https://images-na.ssl-images-amazon.com/images/I/51wPOsD7n1L._AC_SX679_.jpg"/>
-
+\
+            
           </div>
 
           <div className="home__row">
