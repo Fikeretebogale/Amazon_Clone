@@ -47,25 +47,22 @@ const Payment = () => {
 			})
 			.then(({ paymentIntent }) => {
 				//paymentIntent=payment confirmation
-        db.collection('users')
-          .doc(user?.uid)
-          .collection('orders')
-          .doc(paymentIntent.id)
-          .set({
-            basket: basket,
-            amount: paymentIntent.amount,
-            created: paymentIntent.created,
-          });
-
-
-
+				db.collection("users")
+					.doc(user?.uid)
+					.collection("orders")
+					.doc(paymentIntent.id)
+					.set({
+						basket: basket,
+						amount: paymentIntent.amount,
+						created: paymentIntent.created,
+					});
 
 				setSucceeded(true);
 				setError(null);
-        setProcessing(false);
-        disPatch({
-          type: 'EMPTY_BASKET',
-        });
+				setProcessing(false);
+				disPatch({
+					type: "EMPTY_BASKET",
+				});
 
 				history.replace("/orders");
 			});

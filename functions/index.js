@@ -3,7 +3,7 @@ const functions = require("firebase-functions");
 const express = require("express");
 const cors = require("cors");
 const stripe = require("stripe")(
-  "sk_test_51IOFd2DAwS36Hqb0pCvEi2krMVDSvHEQw6gQDHjb9wtFwuRVJwfa5mzm9r4kNFFY1cl4ZKvXA0VssD1lByVSkjeQ00Mo7H7q83"
+	"sk_test_51IOFd2DAwS36Hqb0pCvEi2krMVDSvHEQw6gQDHjb9wtFwuRVJwfa5mzm9r4kNFFY1cl4ZKvXA0VssD1lByVSkjeQ00Mo7H7q83"
 );
 const app = express();
 app.use(cors({ origin: true }));
